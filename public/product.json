@@ -1,0 +1,65 @@
+[
+    {
+        "categoryId": "1",
+        "Name": "iPhone 14 pro max",
+        "brand": "iphone",
+        "price": 500,
+        "details": "Apple iPhone 14 Pro and iPhone 14 Pro Max pop in purple in incredibly life-like fan-made concept renderings"
+    },
+    {
+        "categoryId": "1",
+        "Name": "iPhone 13 pro max",
+        "brand": "iphone",
+        "price": 400,
+        "details": "The new Pro models in the iPhone family pull even further ahead of their vanilla counterparts with a faster GPU, improved camera hardware and, most importantly,"
+    },
+    {
+        "categoryId": "1",
+        "Name": "iPhone 12 pro max",
+        "brand": "iphone",
+        "price": 300,
+        "details": "Apple iPhone 12 Pro Max comes with a 6.7 inches Super Retina XDR OLED screen which is one of its main specialties."
+    },
+    {
+        "categoryId": "2",
+        "Name": "Samsung Galaxy Note9",
+        "brand": "samsung",
+        "price": 440,
+        "details": "Best price for Samsung Galaxy Note 9 is Rs. 37999 as on 23rd November 2022. Read full specifications, expert reviews, user ratings and FAQs."
+    },
+    {
+        "categoryId": "2",
+        "Name": "Samsung Galaxy Note10 Pro",
+        "brand": "samsung",
+        "price": 290,
+        "details": "Samsung Galaxy Note10 Pro is powered by Exynos 9820 (8 nm) EMEA Qualcomm SDM855 Snapdragon 855 (7 nm)  USA/LATAM, China"
+    },
+    {
+        "categoryId": "2",
+        "Name": "Samsung Galaxy A13",
+        "brand": "samsung",
+        "price": 350,
+        "details": "Samsung Galaxy A13 price starts from BDT. 20,999. Samsung Galaxy A13 internal storage base variant of 3 GB, 4 GB, 6 GB Ram, 32 GB, 64 GB, 128 GB Internal Memory "
+    },
+    {
+        "categoryId": "3",
+        "Name": "Vivo Y21",
+        "brand": "vivo",
+        "price": 360,
+        "details": "The lowest price of vivo y21 price in bangladesh TK 17599/- Check prices from all online stores in bangladesh, compare specs, features set price alerts."
+    },
+    {
+        "categoryId": "3",
+        "Name": "Vivo V23",
+        "brand": "vivo",
+        "price": 280,
+        "details": "The vivo V23 5G Price in Bangladesh is ৳39,990 8/128 GB BDT. This phone comes with 4200 mAh battery and 6.44 inches display. "
+    },
+    {
+        "categoryId": "3",
+        "Name": "Vivo V25",
+        "brand": "vivo",
+        "price": 350,
+        "details": "vivo v25 5g price in bd is 47,999 Taka. Considering the price, we hope it will be a great phone. BD Price info: With this intention, All of our product data"
+    }
+]
