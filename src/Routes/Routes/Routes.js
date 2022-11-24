@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"
 import Main from "../../Layout/Main"
-import CategoriesIphone from "../../Pages/Categories/Categories/CategoriesIphone";
-import CategoriesSamsung from "../../Pages/Categories/CategoriesSamsung/CategoriesSamsung";
-import CategoriesVivo from "../../Pages/Categories/CategoriesVivo/CategoriesVivo";
+import Categories from "../../Pages/Categories/Categories/Categories";
 import Home from "../../Pages/Home/Home/Home"
 import Login from "../../Pages/Login/Login";
 
@@ -22,18 +20,10 @@ const router = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path: '/categorisiphone',
-                element:<CategoriesIphone></CategoriesIphone>,
+                path: '/categories/:brand',
+                element: <Categories></Categories>,
                 loader:({params}) => fetch(`http://localhost:5000/categories/${params.brand}`)
-            },
-            {
-                path: '/categorissamsung',
-                element:<CategoriesSamsung></CategoriesSamsung>
-            },
-            {
-                path: '/categorisvivo',
-                element:<CategoriesVivo></CategoriesVivo>
-            },
+            }
         ]
     }
 ])
