@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Navbar = () => {
-    const { user,logout } = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
 
     const handleSignOut = () => {
         logout()
@@ -14,15 +14,8 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link to="/" className='text-2xl font-medium rounded-lg'>Home</Link></li>
-        <li><Link to="/" className='text-2xl font-medium rounded-lg'>Products</Link></li>
+        <li><Link to="/dashboard" className='text-2xl font-medium rounded-lg'>DashBoard</Link></li>
         <li><Link to="/blog" className='text-2xl font-medium rounded-lg'>blog</Link></li>
-        {
-            user?.email ?
-                <li><Link onClick={handleSignOut} className='text-2xl font-medium rounded-lg'>SignOut</Link></li>
-                :
-                <li><Link to="/login" className='text-2xl font-medium rounded-lg'>login</Link></li>
-
-        }
     </>
 
 
@@ -44,9 +37,13 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
-            {/* <div className="navbar-end">
-                <Link className='text-2xl font-medium'>SignOut</Link>
-            </div> */}
+            {
+                user?.email ?
+                    <li><Link onClick={handleSignOut} className='text-2xl font-medium rounded-lg'>SignOut</Link></li>
+                    :
+                    <li><Link to="/login" className='text-2xl font-medium rounded-lg'>login</Link></li>
+
+            }
         </div>
     );
 };

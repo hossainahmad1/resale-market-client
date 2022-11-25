@@ -9,7 +9,7 @@ import useToken from '../../useToken/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, signInGoogle} = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
     const [createdUserEmail, setCreatedUserEmail] = useState('');
     const [token] = useToken(createdUserEmail)
@@ -59,6 +59,16 @@ const SignUp = () => {
             })
     }
 
+
+    const handleGoogleSignIn = () => {
+        signInGoogle()
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+            navigate('/')
+        })
+        .catch(err => console.log(err))
+    }
 
 
     return (
@@ -118,7 +128,7 @@ const SignUp = () => {
                 <p className='text-center mt-4'>Already Have an Account? Please <Link className='text-primary' to='/login'>Login</Link></p>
                 <div className="flex flex-col w-full border-opacity-50">
                     <div className="divider">OR</div>
-                    <button className='btn btn-outline'>CONTINUE WITH GOOGLE</button>
+                    <button onClick={handleGoogleSignIn} className='btn btn-outline'>CONTINUE WITH GOOGLE</button>
                 </div>
             </div>
         </div>

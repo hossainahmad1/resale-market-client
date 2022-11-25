@@ -17,11 +17,12 @@ const Categories = () => {
                     ></CategoriesCart>)
                 }
             </div>
-           { 
-            products &&
-           <BuyModal
-                products={products}
-            ></BuyModal>}
+            {
+                products &&
+                <BuyModal
+                    products={products}
+                    setProducts={setProducts}
+                ></BuyModal>}
         </section>
     );
 };

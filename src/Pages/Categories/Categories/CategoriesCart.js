@@ -12,12 +12,8 @@ const CategoriesCart = ({ data,setProducts }) => {
                     <div className='flex '><span className='mr-10'>Original price: ${origin}</span><span>Price: ${price}</span></div>
                     <div className='flex'> <span className='mr-12'>Seller: {seller}</span> <span>Posted: {post}</span></div>
                     <div className='flex'><span className='mr-12'>Location: {location} </span> <span>used: {use}</span></div>
-                    {/* <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div> */}
-                    <div className="card-actions justify-center">
+                    <div className="card-action">
                         <label
-                            // disabled={}
                             onClick={() => setProducts(data) }
                             htmlFor="book-modal"
                             className="btn btn-primary"
