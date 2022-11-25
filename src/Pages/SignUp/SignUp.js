@@ -20,6 +20,7 @@ const SignUp = () => {
         navigate('/')
     }
     const handleSignup = data => {
+        console.log(data)
         setSignUpError('')
         createUser(data.email, data.password)
             .then(result => {
@@ -74,6 +75,17 @@ const SignUp = () => {
                             })}
                             type="text"
                             className="input input-bordered w-full " />
+                    </div>
+                    <div>
+                        <label className="label"><span className="label-text">select</span></label>
+                        <select {...register('select',
+                            {
+                                required: 'select is required',
+                            })}
+                            className="select select-bordered w-full">
+                            <option>Buyer</option>
+                            <option>Seller</option>
+                        </select>
                     </div>
                     <div className="form-control w-full">
                         <label className="label"><span className="label-text">Email</span> </label>
