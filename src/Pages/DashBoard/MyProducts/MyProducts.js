@@ -11,7 +11,11 @@ const MyProducts = () => {
     const { data: buyings = [], refetch } = useQuery({
         queryKey: ['buyings', user?.email],
         queryFn: async () => {
-            const res = await fetch(url)
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
             const data = await res.json()
             return data;
         }
@@ -33,7 +37,7 @@ const MyProducts = () => {
 
     return (
         <div>
-            <h3 className='text-3xl'> My Orders</h3>
+            <h3 className='text-3xl'> My Products</h3>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

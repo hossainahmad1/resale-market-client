@@ -1,8 +1,10 @@
 import React from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 const AddToProducts = () => {
-
+      const navigate = useNavigate()
     const handleSubmit = event => {
         event.preventDefault()
         const form = event.target;
@@ -14,7 +16,6 @@ const AddToProducts = () => {
         const img = form.img.value;
         const use = form.use.value;
         const location = form.location.value;
-        // console.log(seller, name, price, brand, img, origin, location)
 
         const products = {
             name, brand, img, use, phone, location, price, seller
@@ -33,6 +34,7 @@ const AddToProducts = () => {
                 if (data.acknowledged) {
                     toast.success('products added successfully');
                     console.log(data)
+                  navigate('/dashboard')
                 }
             })
     }
