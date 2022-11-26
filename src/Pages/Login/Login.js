@@ -10,9 +10,9 @@ import useToken from '../../useToken/useToken';
 const Login = () => {
     const [loginError, setLoginError] = useState('');
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [loginBuyerEmail, setLoginBuyerEmail] = useState('');
     const { loginUser } = useContext(AuthContext);
-    const [token] = useToken(loginUserEmail);
+    const [token] = useToken(loginBuyerEmail);  
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -23,7 +23,6 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
-
     const handleLogin = data => {
         console.log(data);
         setLoginError('')
@@ -31,8 +30,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                setLoginUserEmail(data.email)
-                navigate(from, { replace: true })
+                setLoginBuyerEmail(data.email)
                 reset()
             })
             .catch(error => {

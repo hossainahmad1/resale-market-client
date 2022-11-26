@@ -9,10 +9,10 @@ import useToken from '../../useToken/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { createUser, updateUser, signInGoogle} = useContext(AuthContext);
+    const { createUser, updateUser, signInGoogle } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
-    const [createdUserEmail, setCreatedUserEmail] = useState('');
-    const [token] = useToken(createdUserEmail)
+    const [createdBuyerEmail, setCreatedBuyerEmail] = useState('');
+    const [token] = useToken(createdBuyerEmail)
     const navigate = useNavigate();
 
 
@@ -32,7 +32,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.name, data.email);
+                        saveBuyers(data.name, data.email);
                         reset()
                     })
                     .catch(err => console.error(err))
@@ -44,30 +44,31 @@ const SignUp = () => {
 
     }
 
-    const saveUser = (name, email) => {
-        const users = { name, email };
-        fetch('http://localhost:5000/users', {
+    const saveBuyers = (name, email) => {
+        const buyers = { name, email };
+        fetch('http://localhost:5000/buyers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(users)
+            body: JSON.stringify(buyers)
         })
             .then(res => res.json())
             .then(data => {
-                setCreatedUserEmail(email)
+                console.log(data)
+                setCreatedBuyerEmail(email)
             })
     }
 
 
     const handleGoogleSignIn = () => {
         signInGoogle()
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-            navigate('/')
-        })
-        .catch(err => console.log(err))
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                navigate('/')
+            })
+            .catch(err => console.log(err))
     }
 
 

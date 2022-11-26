@@ -1,0 +1,12 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 300px;
+    width: 350px;
+    margin: 0 auto;
+}
