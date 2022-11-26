@@ -6,6 +6,7 @@ import Categories from "../../Pages/Categories/Categories/Categories";
 import AddToProducts from "../../Pages/DashBoard/AddToProducts/AddToProducts";
 import AllUsers from "../../Pages/DashBoard/AllUsers/AllUsers";
 import DashBoard from "../../Pages/DashBoard/DashBoard";
+import MyAllProducts from "../../Pages/DashBoard/MyAllProducts/MyAllProducts";
 import MyProducts from "../../Pages/DashBoard/MyProducts/MyProducts";
 import Error from "../../Pages/Error/Error";
 import Home from "../../Pages/Home/Home/Home"
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/addtoproducts',
                 element: <AddToProducts></AddToProducts>
+            },
+            {
+                path: '/dashboard/myallproducts',
+                element: <MyAllProducts></MyAllProducts>
             },
             {
                 path: '/dashboard/allusers',
