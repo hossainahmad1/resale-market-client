@@ -32,7 +32,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveBuyers(data.name, data.email,data.select);
+                        saveBuyers(data.name, data.email, data.select);
                         reset()
                     })
                     .catch(err => console.error(err))
@@ -44,9 +44,9 @@ const SignUp = () => {
 
     }
 
-    const saveBuyers = (name, email,select) => {
-        const buyers = { name, email,select };
-        fetch('http://localhost:5000/buyers', {
+    const saveBuyers = (name, email, select) => {
+        const buyers = { name, email, select };
+        fetch('https://final-project-server-two.vercel.app/buyers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

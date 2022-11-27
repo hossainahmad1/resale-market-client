@@ -5,17 +5,17 @@ import toast from 'react-hot-toast';
 
 const AllBuyer = () => {
 
-    const { data: buyers=[],refetch } = useQuery({
+    const { data: buyers = [], refetch } = useQuery({
         queryKey: ['buyers'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/buyers/buyer`)
+            const res = await fetch(`https://final-project-server-two.vercel.app/buyers/buyer`)
             const data = await res.json()
             return data;
         }
     })
 
     const handleDeleteBuyer = id => {
-        fetch(`http://localhost:5000/buyers/${id}`, {
+        fetch(`https://final-project-server-two.vercel.app/buyers/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -27,7 +27,7 @@ const AllBuyer = () => {
                 }
             })
     }
-    
+
     return (
         <div>
             <h1 className='text-3xl'>All Buyers</h1>
@@ -44,12 +44,12 @@ const AllBuyer = () => {
                     </thead>
                     <tbody>
                         {
-                            buyers.map((buyer,i) => <tr>
-                                <th>{i+1}</th>
+                            buyers.map((buyer, i) => <tr>
+                                <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
                                 <td>Blue</td>
-                                <td><button onClick={() =>  handleDeleteBuyer(buyer._id)} className='btn btn-sm'>Delete</button></td>
+                                <td><button onClick={() => handleDeleteBuyer(buyer._id)} className='btn btn-sm'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>

@@ -6,7 +6,7 @@ const AllUsers = () => {
     const { data: buyers = [] } = useQuery({
         queryKey: ['buyers'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/buyers')
+            const res = await fetch('https://final-project-server-two.vercel.app/buyers')
             const data = await res.json()
             return data;
         }
@@ -29,8 +29,8 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {
-                            buyers.map((buyer,i) => <tr key={buyer._id}>
-                                <th>{i+1}</th>
+                            buyers.map((buyer, i) => <tr key={buyer._id}>
+                                <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
                                 <td>Blue</td>

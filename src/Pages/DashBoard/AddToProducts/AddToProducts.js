@@ -16,18 +16,18 @@ const AddToProducts = () => {
         const origin = form.origin.value;
         const email = form.email.value;
         const brand = form.brand.value;
-         const post = form.post.value;
+        const post = form.post.value;
         const phone = form.phone.value;
         const img = form.img.value;
         const use = form.use.value;
         const location = form.location.value;
 
         const products = {
-            name, brand, email, img, use,origin,post, phone, location, price, seller
+            name, brand, email, img, use, origin, post, phone, location, price, seller
         }
         console.log(products)
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://final-project-server-two.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

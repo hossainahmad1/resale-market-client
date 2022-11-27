@@ -1,6 +1,6 @@
-1.Live Link:
-2.Github-(client-side) repo:
-3.Github-(Server-side) reop:
+1.Live Link:  https://final-project-cd660.web.app
+2.Github-(client-side) repo: 
+3.Github-(Server-side) reop: 
 
 
 

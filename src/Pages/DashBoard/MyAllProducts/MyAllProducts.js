@@ -5,12 +5,13 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 
 
+
 const MyAllProducts = () => {
     const { user } = useContext(AuthContext)
-    const { data: products = [],refetch } = useQuery({
+    const { data: products = [], refetch } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/products?email=${user?.email}`)
+            const res = await fetch(`https://final-project-server-two.vercel.app/products?email=${user?.email}`)
             const data = await res.json()
             return data;
         }
@@ -18,7 +19,7 @@ const MyAllProducts = () => {
 
 
     const handleDeleteProducts = id => {
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://final-project-server-two.vercel.app/products/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -30,6 +31,8 @@ const MyAllProducts = () => {
                 }
             })
     }
+
+
 
 
     return (

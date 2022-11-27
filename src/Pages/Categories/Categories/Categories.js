@@ -3,6 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import BuyModal from '../BuyModal/BuyModal';
 import CategoriesCart from './CategoriesCart';
 
+
+
+
 const Categories = () => {
     const datas = useLoaderData()
     const [products, setProducts] = useState(null)

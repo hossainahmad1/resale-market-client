@@ -3,11 +3,14 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
+
+
 const MyProducts = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/buyings?email=${user?.email}`;
 
+    //Query the email and show the products
+    const url = `https://final-project-server-two.vercel.app/buyings?email=${user?.email}`;
     const { data: buyings = [], refetch } = useQuery({
         queryKey: ['buyings', user?.email],
         queryFn: async () => {
@@ -21,8 +24,10 @@ const MyProducts = () => {
         }
     })
 
+
+    // Delete Product
     const handleDeleteProducts = id => {
-        fetch(`http://localhost:5000/buyings/${id}`, {
+        fetch(`https://final-project-server-two.vercel.app/buyings/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -34,6 +39,7 @@ const MyProducts = () => {
                 }
             })
     }
+
 
     return (
         <div>

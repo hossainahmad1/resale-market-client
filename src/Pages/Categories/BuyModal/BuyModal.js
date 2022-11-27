@@ -27,7 +27,7 @@ const BuyModal = ({ products, setProducts }) => {
             location
         }
 
-        fetch('http://localhost:5000/buyings', {
+        fetch('https://final-project-server-two.vercel.app/buyings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

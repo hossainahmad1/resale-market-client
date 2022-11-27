@@ -7,7 +7,7 @@ const AllSeller = () => {
     const { data: buyers = [], refetch } = useQuery({
         queryKey: ['buyers'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/buyers/seller`)
+            const res = await fetch(`https://final-project-server-two.vercel.app/buyers/seller`)
             const data = await res.json()
             return data;
         }
@@ -15,7 +15,7 @@ const AllSeller = () => {
 
 
     const handleDeleteSeller = id => {
-        fetch(`http://localhost:5000/buyers/${id}`, {
+        fetch(`https://final-project-server-two.vercel.app/buyers/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -29,6 +29,20 @@ const AllSeller = () => {
     }
 
 
+    const handleVerify = id => {
+        fetch(`https://final-project-server-two.vercel.app/buyers/verify/${id}`, {
+            method: 'PUT'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+
+    }
+
+
+
+
     return (
         <div>
             <h1 className='text-3xl'>All Sellers</h1>
@@ -36,10 +50,10 @@ const AllSeller = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>S.N</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Favorite Color</th>
+                            <th>Verify</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -49,8 +63,8 @@ const AllSeller = () => {
                                 <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
-                                <td>Blue</td>
-                                <td><button onClick={()=> handleDeleteSeller(buyer._id)} className='btn btn-sm'>delete</button></td>
+                                <td><button onClick={() => handleVerify(buyer._id)} className='btn btn-sm btn-primary'>Verify</button></td>
+                                <td><button onClick={() => handleDeleteSeller(buyer._id)} className='btn btn-sm'>delete</button></td>
                             </tr>)
                         }
                     </tbody>

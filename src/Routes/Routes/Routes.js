@@ -48,7 +48,7 @@ const router = createBrowserRouter([
             {
                 path: '/categories/:brand',
                 element: <PrivateRoute><Categories></Categories></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.brand}`)
+                loader: ({ params }) => fetch(`https://final-project-server-two.vercel.app/categories/${params.brand}`)
             }
         ]
     },
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/allbuyer',
                 element: <AllBuyer></AllBuyer>,
-                loader: ({ params }) => fetch(`http://localhost:5000/buyers/${params.select}`)
+                loader: ({ params }) => fetch(`https://final-project-server-two.vercel.app/buyers/${params.select}`)
             },
         ]
     },
