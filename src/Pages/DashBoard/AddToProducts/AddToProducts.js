@@ -49,7 +49,7 @@ const AddToProducts = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-3 mt-10'>
+            <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-3 mt-10 mb-10'>
                 <h3 className='text-3xl'>Add A Products</h3>
                 <input name='seller' type="text" placeholder="User Name" className="input w-full max-w-lg  input-bordered " />
                 <input name='name' type="text" placeholder="Product Name" className="input w-full max-w-lg input-bordered " />

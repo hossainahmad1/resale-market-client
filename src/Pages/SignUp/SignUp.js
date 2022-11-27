@@ -94,8 +94,8 @@ const SignUp = () => {
                                 required: 'select is required',
                             })}
                             className="select select-bordered w-full">
-                            <option>Buyer</option>
-                            <option>Seller</option>
+                            <option>buyer</option>
+                            <option>seller</option>
                         </select>
                     </div>
                     <div className="form-control w-full">
