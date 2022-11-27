@@ -10,7 +10,7 @@ const DashBoardLayout = () => {
     const { user } = useContext(AuthContext)
     const [buyer, setBuyers] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/buyerss?email=${user?.email}`)
+        fetch(`https://final-project-server-two.vercel.app/buyerss?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -6,6 +6,7 @@ import Products from '../Products/Products';
 const Home = () => {
     return (
         <div>
+            
             <Bannar></Bannar>
             <Products></Products>
             <HomeCart></HomeCart>
