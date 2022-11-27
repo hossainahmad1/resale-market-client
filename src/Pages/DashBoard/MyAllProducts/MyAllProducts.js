@@ -43,6 +43,7 @@ const MyAllProducts = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Price</th>
+                            <th>Status</th>
                             <th>Advertise</th>
                             <th>Delete</th>
                         </tr>
@@ -54,6 +55,7 @@ const MyAllProducts = () => {
                                 <td>{product.name}</td>
                                 <td>{product.email}</td>
                                 <td>{product.price}</td>
+                                <td>Available</td>
                                 <td><button className='btn btn-sm btn-primary'>Advertis</button></td>
                                 <td><button onClick={() => handleDeleteProducts(product._id)} className='btn btn-sm'>delete</button></td>
                             </tr>)

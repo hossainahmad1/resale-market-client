@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/categories/:brand',
-                element: <Categories></Categories>,
+                element: <PrivateRoute><Categories></Categories></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.brand}`)
             }
         ]
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/allbuyer',
                 element: <AllBuyer></AllBuyer>,
-                loader: ({params}) => fetch(`http://localhost:5000/buyers/${params.select}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/buyers/${params.select}`)
             },
         ]
     },

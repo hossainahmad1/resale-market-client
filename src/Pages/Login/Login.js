@@ -31,6 +31,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 setLoginBuyerEmail(data.email)
+                navigate(from, { replace: true });
                 reset()
             })
             .catch(error => {
