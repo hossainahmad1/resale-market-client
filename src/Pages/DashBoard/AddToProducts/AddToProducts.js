@@ -13,15 +13,17 @@ const AddToProducts = () => {
         const seller = form.seller.value;
         const name = form.name.value;
         const price = form.price.value;
+        const origin = form.origin.value;
         const email = form.email.value;
         const brand = form.brand.value;
+         const post = form.post.value;
         const phone = form.phone.value;
         const img = form.img.value;
         const use = form.use.value;
         const location = form.location.value;
 
         const products = {
-            name, brand, email, img, use, phone, location, price, seller
+            name, brand, email, img, use,origin,post, phone, location, price, seller
         }
         console.log(products)
 
@@ -52,6 +54,7 @@ const AddToProducts = () => {
                 <input name='seller' type="text" placeholder="User Name" className="input w-full max-w-lg  input-bordered " />
                 <input name='name' type="text" placeholder="Product Name" className="input w-full max-w-lg input-bordered " />
                 <input name='price' type="text" placeholder="Product Price" className="input w-full max-w-lg input-bordered " />
+                <input name='origin' type="text" placeholder="Origin Price" className="input w-full max-w-lg input-bordered " />
                 <input name='email' type="email" placeholder="email" disabled defaultValue={user?.email} className="input w-full max-w-lg input-bordered " />
                 <select name='brand' className="select select-bordered w-full max-w-lg">
                     <option>Select your category</option>
@@ -61,6 +64,7 @@ const AddToProducts = () => {
                 </select>
                 <input name='img' type="text" placeholder="Photo URL" className="input w-full max-w-lg input-bordered " />
                 <input name='use' type="text" placeholder="Used" className="input w-full max-w-lg input-bordered " />
+                <input name='post' type="text" placeholder="Post Date" className="input w-full max-w-lg input-bordered " />
                 <input name='phone' type="text" placeholder="Phone Number" className="input w-full max-w-lg input-bordered " />
                 <input name='location' type="text" placeholder="location" className="input w-full max-w-lg input-bordered " />
                 <input className='btn btn-primary w-full max-w-lg input-bordered' type="submit" value="Submit" />

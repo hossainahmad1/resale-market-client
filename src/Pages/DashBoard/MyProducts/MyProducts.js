@@ -37,12 +37,12 @@ const MyProducts = () => {
 
     return (
         <div>
-            <h3 className='text-3xl'> My Orders</h3>
+            <h3 className='text-3xl'>My Orders</h3>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>S.N</th>
                             <th>Name</th>
                             <th>Price</th>
                             <th>Email</th>

@@ -21,7 +21,7 @@ const AllUsers = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>S.N</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Favorite Color</th>

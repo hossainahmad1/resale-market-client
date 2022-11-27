@@ -32,7 +32,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveBuyers(data.name, data.email);
+                        saveBuyers(data.name, data.email,data.select);
                         reset()
                     })
                     .catch(err => console.error(err))
@@ -44,8 +44,8 @@ const SignUp = () => {
 
     }
 
-    const saveBuyers = (name, email) => {
-        const buyers = { name, email };
+    const saveBuyers = (name, email,select) => {
+        const buyers = { name, email,select };
         fetch('http://localhost:5000/buyers', {
             method: 'POST',
             headers: {
