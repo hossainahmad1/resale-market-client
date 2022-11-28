@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 
 
 const AllBuyer = () => {
-
     const { data: buyers = [], refetch } = useQuery({
         queryKey: ['buyers'],
         queryFn: async () => {
@@ -14,7 +13,6 @@ const AllBuyer = () => {
         }
     })
 
-   
     const handleDeleteBuyer = id => {
         fetch(`https://final-project-server-two.vercel.app/buyers/${id}`, {
             method: 'DELETE',
