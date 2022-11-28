@@ -24,7 +24,7 @@ const AllUsers = () => {
                             <th>S.N</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Favorite Color</th>
+                            <th>Select</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,7 +33,7 @@ const AllUsers = () => {
                                 <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
-                                <td>Blue</td>
+                                <td>{buyer.select}</td>
                             </tr>)
                         }
                     </tbody>

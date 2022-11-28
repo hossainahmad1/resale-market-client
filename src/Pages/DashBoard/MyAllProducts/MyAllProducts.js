@@ -17,6 +17,22 @@ const MyAllProducts = () => {
         }
     })
 
+    const handleAdvertise = id => {
+        fetch(`https://final-project-server-two.vercel.app/products/advertise/${id}`, {
+            method: 'PUT'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    toast.success('verify successfully');
+                    refetch()
+                    console.log(data)
+                }
+
+            })
+
+    }
+
 
     const handleDeleteProducts = id => {
         fetch(`https://final-project-server-two.vercel.app/products/${id}`, {
@@ -31,8 +47,6 @@ const MyAllProducts = () => {
                 }
             })
     }
-
-
 
 
     return (
@@ -59,7 +73,7 @@ const MyAllProducts = () => {
                                 <td>{product.email}</td>
                                 <td>{product.price}</td>
                                 <td>Available</td>
-                                <td><button className='btn btn-sm btn-primary'>Advertis</button></td>
+                                <td><button onClick={()=> handleAdvertise(products._id)} className='btn btn-sm btn-primary'>Advertise</button></td>
                                 <td><button onClick={() => handleDeleteProducts(product._id)} className='btn btn-sm'>delete</button></td>
                             </tr>)
                         }

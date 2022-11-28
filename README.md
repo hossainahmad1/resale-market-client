@@ -14,3 +14,7 @@ My Projects Features and Functionalities;
     6.daisyUI
     7.@tanstack/react-query
 }
+
+
+Admin Email: hossain@17gmail.com
+password: Pp@2pp

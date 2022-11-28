@@ -2,7 +2,7 @@ import React from 'react';
 
 const Bannar = () => {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url("https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/Apple_iphone_14_Pro_iPhone_14_Pro_Max_concept_renderings_drdNBC.jpg")` }}>
+        <div className="hero min-h-screen rounded" style={{ backgroundImage: `url("https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/Apple_iphone_14_Pro_iPhone_14_Pro_Max_concept_renderings_drdNBC.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

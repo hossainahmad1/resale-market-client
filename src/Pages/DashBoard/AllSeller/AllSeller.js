@@ -37,12 +37,15 @@ const AllSeller = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if (data.modifiedCount > 0) {
+                    toast.success('verify successfully');
+                    refetch()
+                    console.log(data)
+                }
             })
-
     }
 
-
+   
 
 
     return (
@@ -65,7 +68,10 @@ const AllSeller = () => {
                                 <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
-                                <td><button onClick={() => handleVerify(buyer._id)} className='btn btn-sm btn-primary'>Verify</button></td>
+                                <td>{buyer?.verify === 'verified' ?
+                                    <button className='btn btn-sm btn-success'>Verified</button>
+                                    :<button onClick={() => handleVerify(buyer._id)} className='btn btn-sm btn-primary'>Verify</button>}
+                                </td>
                                 <td><button onClick={() => handleDeleteSeller(buyer._id)} className='btn btn-sm'>delete</button></td>
                             </tr>)
                         }

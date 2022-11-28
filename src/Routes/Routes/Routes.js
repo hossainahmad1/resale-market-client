@@ -7,7 +7,6 @@ import AddToProducts from "../../Pages/DashBoard/AddToProducts/AddToProducts";
 import AllBuyer from "../../Pages/DashBoard/AllBuyer/AllBuyer";
 import AllSeller from "../../Pages/DashBoard/AllSeller/AllSeller";
 import AllUsers from "../../Pages/DashBoard/AllUsers/AllUsers";
-import DashBoard from "../../Pages/DashBoard/DashBoard";
 import MyAllProducts from "../../Pages/DashBoard/MyAllProducts/MyAllProducts";
 import MyProducts from "../../Pages/DashBoard/MyProducts/MyProducts";
 import Error from "../../Pages/Error/Error";

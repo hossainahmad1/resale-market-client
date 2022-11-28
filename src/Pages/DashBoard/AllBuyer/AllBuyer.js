@@ -14,15 +14,15 @@ const AllBuyer = () => {
         }
     })
 
+    const axios = require('axios');
     const handleDeleteBuyer = id => {
-        fetch(`https://final-project-server-two.vercel.app/buyers/${id}`, {
+        axios.get(`https://final-project-server-two.vercel.app/buyers/${id}`, {
             method: 'DELETE',
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
+            .then(res => {
+                if (res.data.data.deletedCount > 0) {
                     toast.success('deleted successfully')
-                    console.log(data)
+                    console.log(res.data.data)
                     refetch()
                 }
             })
@@ -38,17 +38,17 @@ const AllBuyer = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Favorite Color</th>
+                            <th>select</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            buyers.map((buyer, i) => <tr>
+                            buyers.map((buyer, i) => <tr key={buyer._id}>
                                 <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
-                                <td>Blue</td>
+                                <td>{buyer.select}</td>
                                 <td><button onClick={() => handleDeleteBuyer(buyer._id)} className='btn btn-sm'>Delete</button></td>
                             </tr>)
                         }
