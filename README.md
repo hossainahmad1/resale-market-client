@@ -13,6 +13,7 @@ My Projects Features and Functionalities;
     5.tailwindcss
     6.daisyUI
     7.@tanstack/react-query
+    8.axios
 }
 
 
