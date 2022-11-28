@@ -14,15 +14,16 @@ const AllBuyer = () => {
         }
     })
 
-    const axios = require('axios');
+   
     const handleDeleteBuyer = id => {
-        axios.get(`https://final-project-server-two.vercel.app/buyers/${id}`, {
+        fetch(`https://final-project-server-two.vercel.app/buyers/${id}`, {
             method: 'DELETE',
         })
-            .then(res => {
-                if (res.data.data.deletedCount > 0) {
+        .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
                     toast.success('deleted successfully')
-                    console.log(res.data.data)
+                    console.log(data)
                     refetch()
                 }
             })

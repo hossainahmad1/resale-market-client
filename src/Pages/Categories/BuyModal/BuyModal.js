@@ -60,8 +60,8 @@ const BuyModal = ({ products, setProducts }) => {
                         <input name='price' type="text" disabled value={price} className="input w-full input-bordered " />
                         <input name='name' type="text" disabled defaultValue={user?.displayName} placeholder="Your Name" className="input w-full input-bordered " />
                         <input name='email' type="text" disabled defaultValue={user?.email} placeholder="Email Address" className="input w-full input-bordered " />
-                        <input name='phone' type="text" placeholder="Phone Number" className="input w-full input-bordered " />
-                        <input name='location' type="text" placeholder="location" className="input w-full input-bordered " />
+                        <input name='phone' type="text" placeholder="Phone Number" className="input w-full input-bordered " required />
+                        <input name='location' type="text" placeholder="location" className="input w-full input-bordered " required/>
                         <input className='btn btn-primary w-full input-bordered' type="submit" value="Submit" />
                     </form>
                 </div>

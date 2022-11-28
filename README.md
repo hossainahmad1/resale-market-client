@@ -18,5 +18,5 @@ My Projects Features and Functionalities;
 }
 
 
-Admin Email: hossain@17gmail.com
+Admin Email: hossain17@gmail.com
 password: Pp@2pp
