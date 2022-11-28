@@ -1,6 +1,7 @@
 1.Live Link:  https://final-project-cd660.web.app
-2.Github-(client-side) repo: 
-3.Github-(Server-side) reop: 
+2.Github-(client-side) repo: https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-hossainahmad1
+
+3.Github-(Server-side) reop: https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-hossainahmad1
 
 
 
