@@ -61,7 +61,7 @@ const AllSeller = () => {
                     </thead>
                     <tbody>
                         {
-                            buyers.map((buyer, i) => <tr>
+                            buyers.map((buyer, i) => <tr key={buyer._id}>
                                 <th>{i + 1}</th>
                                 <td>{buyer.name}</td>
                                 <td>{buyer.email}</td>
