@@ -65,6 +65,23 @@ const SignUp = () => {
         signInGoogle()
             .then(result => {
                 const user = result.user;
+                const handleGoogle = {
+                    name: user.displayName,
+                    email: user.email,
+                    select: 'buyer'
+                }
+                fetch(`https://final-project-server-two.vercel.app/buyers`, {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body:JSON.stringify(handleGoogle)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+                console.log(handleGoogle)
                 console.log(user)
                 navigate('/')
             })
