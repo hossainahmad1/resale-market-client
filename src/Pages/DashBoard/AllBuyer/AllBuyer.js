@@ -17,7 +17,7 @@ const AllBuyer = () => {
         fetch(`https://final-project-server-two.vercel.app/buyers/${id}`, {
             method: 'DELETE',
         })
-        .then(res => res.json())
+            .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
                     toast.success('deleted successfully')

@@ -15,9 +15,9 @@ const MyProducts = () => {
         queryKey: ['buyings', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
-                headers: {
-                    authorization: `bearer ${localStorage.getItem('accessToken')}`
-                }
+                // headers: {
+                //     authorization: `bearer ${localStorage.getItem('accessToken')}`
+                // }
             })
             const data = await res.json()
             return data;
@@ -58,7 +58,7 @@ const MyProducts = () => {
                     </thead>
                     <tbody>
                         {
-                            buyings.map((buying, i) => <tr key={buying._id}>
+                            buyings?.map((buying, i) => <tr key={buying._id}>
                                 <th>{i + 1}</th>
                                 <td>{buying.brand}</td>
                                 <td>{buying.price}</td>

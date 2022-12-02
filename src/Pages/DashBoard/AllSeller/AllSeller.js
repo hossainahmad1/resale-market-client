@@ -45,7 +45,7 @@ const AllSeller = () => {
             })
     }
 
-   
+
 
 
     return (
@@ -70,7 +70,7 @@ const AllSeller = () => {
                                 <td>{buyer.email}</td>
                                 <td>{buyer?.verify === 'verified' ?
                                     <button className='btn btn-sm btn-success'>Verified</button>
-                                    :<button onClick={() => handleVerify(buyer._id)} className='btn btn-sm btn-primary'>Verify</button>}
+                                    : <button onClick={() => handleVerify(buyer._id)} className='btn btn-sm btn-primary'>Verify</button>}
                                 </td>
                                 <td><button onClick={() => handleDeleteSeller(buyer._id)} className='btn btn-sm'>delete</button></td>
                             </tr>)

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import useToken from '../../useToken/useToken';
+// import useToken from '../../useToken/useToken';
 
 
 
@@ -11,14 +11,14 @@ const SignUp = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const { createUser, updateUser, signInGoogle } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
-    const [createdBuyerEmail, setCreatedBuyerEmail] = useState('');
-    const [token] = useToken(createdBuyerEmail)
+    // const [createdBuyerEmail, setCreatedBuyerEmail] = useState('');
+    // const [token] = useToken(createdBuyerEmail)
     const navigate = useNavigate();
 
 
-    if (token) {
-        navigate('/')
-    }
+    // if (token) {
+    //     navigate('/')
+    // }
     const handleSignup = data => {
         console.log(data)
         setSignUpError('')
@@ -56,7 +56,7 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                setCreatedBuyerEmail(email)
+                // setCreatedBuyerEmail(email)
             })
     }
 
@@ -70,12 +70,12 @@ const SignUp = () => {
                     email: user.email,
                     select: 'buyer'
                 }
-                fetch(`https://final-project-server-two.vercel.app/buyers`, {
+                fetch('https://final-project-server-two.vercel.app/buyers', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
                     },
-                    body:JSON.stringify(handleGoogle)
+                    body: JSON.stringify(handleGoogle)
                 })
                     .then(res => res.json())
                     .then(data => {

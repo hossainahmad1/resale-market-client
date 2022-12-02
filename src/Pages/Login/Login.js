@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import useToken from '../../useToken/useToken';
+// import useToken from '../../useToken/useToken';
 
 
 
@@ -10,18 +10,18 @@ import useToken from '../../useToken/useToken';
 const Login = () => {
     const [loginError, setLoginError] = useState('');
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const [loginBuyerEmail, setLoginBuyerEmail] = useState('');
+    // const [loginBuyerEmail, setLoginBuyerEmail] = useState('');
     const { loginUser } = useContext(AuthContext);
-    const [token] = useToken(loginBuyerEmail);  
+    // const [token] = useToken(loginBuyerEmail);  
     const navigate = useNavigate();
     const location = useLocation();
 
 
     const from = location?.state?.from?.pathname || '/';
 
-    if (token) {
-        navigate(from, { replace: true });
-    }
+    // if (token) {
+    //     navigate(from, { replace: true });
+    // }
 
     const handleLogin = data => {
         console.log(data);
@@ -30,7 +30,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                setLoginBuyerEmail(data.email)
+                // setLoginBuyerEmail(data.email)
                 navigate(from, { replace: true });
                 reset()
             })

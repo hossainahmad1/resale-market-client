@@ -30,7 +30,6 @@ const MyAllProducts = () => {
                 }
 
             })
-
     }
 
 
@@ -73,7 +72,7 @@ const MyAllProducts = () => {
                                 <td>{product.email}</td>
                                 <td>{product.price}</td>
                                 <td>Available</td>
-                                <td><button onClick={()=> handleAdvertise(products._id)} className='btn btn-sm btn-primary'>Advertise</button></td>
+                                <td><button onClick={() => handleAdvertise(products._id)} className='btn btn-sm btn-primary'>Advertise</button></td>
                                 <td><button onClick={() => handleDeleteProducts(product._id)} className='btn btn-sm'>delete</button></td>
                             </tr>)
                         }
