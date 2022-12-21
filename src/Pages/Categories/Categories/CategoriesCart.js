@@ -7,7 +7,7 @@ const CategoriesCart = ({ data,setProducts }) => {
 
     return (
         <section>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl mb-5">
+            <div className="card card-compact w-80 bg-base-100 shadow-xl mb-5">
                 <figure><img className='w-full h-60' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
