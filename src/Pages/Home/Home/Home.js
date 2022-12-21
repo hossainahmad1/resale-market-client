@@ -7,8 +7,8 @@ import Products from '../Products/Products';
 const Home = () => {
     return (
         <div>
-            <HomeDesign></HomeDesign>
             <Bannar></Bannar>
+            <HomeDesign></HomeDesign>
             <Products></Products>
             <HomeCart></HomeCart>
         </div>

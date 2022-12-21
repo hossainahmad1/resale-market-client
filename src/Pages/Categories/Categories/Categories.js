@@ -11,7 +11,7 @@ const Categories = () => {
     const [products, setProducts] = useState(null)
     return (
         <section>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     datas.map(data => <CategoriesCart
                         key={data._id}

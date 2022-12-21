@@ -5,7 +5,6 @@ import Navbar from '../Shared/Navbar/Navbar';
 
 
 
-
 const DashBoardLayout = () => {
     const { user } = useContext(AuthContext)
     const [buyer, setBuyers] = useState([])
